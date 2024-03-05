@@ -1,8 +1,8 @@
 To run this project with node.js:
 
-install node.js - https://nodejs.org/en
-npm install (in project directory - install node modules)
-npm run dev (to run the server)
+1. install node.js - https://nodejs.org/en
+2. npm install (in project directory - install node modules)
+3. npm run dev (to run the server)
 
 # WND assignment
 
