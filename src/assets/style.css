@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --font-family-base: 'Raleway', sans-serif;
+  --font-family-button: 'Quicksand', sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Light Theme Colors */
+  --color-text-primary: #2c2c2c;
+  --color-background: rgba(42, 145, 168, 0.32);
+  --color-background-header: rgba(44, 60, 159, 0.38);
+  --color-accent: rgba(255, 197, 24, 0.46);
+  --color-accent2: rgba(42, 145, 168, 0.75);
+  --color-accent-hover: rgba(52, 24, 14, 0.5);
+  --color-background-hover-light: rgba(42, 145, 168, 0.7);
+  --color-header-theme: #502616;
+  --color-background-top: rgba(255, 226, 138, 0.54);
+  --color-background-bottom: rgba(138, 167, 255, 0.53);
+
+
+  /* Dark Theme Colors */ /*not used*/
+  --color-text-primary-dark: #ffffff;
+  --color-background-dark: #1e1e1e;
+  --color-accent-dark: rgb(37, 134, 159);
+  --color-accent-hover-dark: rgba(5, 100, 206, 0.82);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  background-image: linear-gradient(to bottom, var(--color-background-top), var(--color-background-bottom));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-header-theme);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+button {
+  background-color: var(--color-accent); /* Use primary accent color */
+  color: #000000;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-family-button); /* Use Quicksand for button text */
+  transition: background-color 0.25s, color 0.25s;
+}
+/*not used*/
+button:hover {
+  background-color: var(--color-accent-hover); /* Use darker shade for hover state */
+}
+/*not used*/
+.filter-button:hover{
+  background: chartreuse;
+}
+
+.card {
+  background-color: rgba(255, 197, 24, 0.46);
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0.1,0.1,0.1,0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme adjustments */
+  a, button {
+    color: var(--color-accent-dark);
+  }
+  a:hover, button:hover {
+    color: var(--color-accent-hover-dark);
+  }
+  .card {
+    background-color: #292929;
+  }
+}
+
+
